@@ -1,0 +1,8 @@
+__pycache__
+tmp
+*.pyc
+.idea
+*.swp
+trained_ok
+private
+.vscode

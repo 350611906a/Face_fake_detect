@@ -1,0 +1,15 @@
+/ssd1/wangwj/dataset/lvmi_dm8/ir/fake/DM8_lvmi098_20220325_ir_fake_faceinfo_epoch-85_352_320_0.88_P_train.txt
+/ssd1/wangwj/dataset/fake_images_file_path_list/with_face_info/2D/training/det_digit_ir_fake_list.txt
+/ssd1/wangwj/dataset/fake_images_file_path_list/with_face_info/2D/training/det_PC-D_ir_fake_list.txt
+/ssd1/wangwj/dataset/fake_images_file_path_list/with_face_info/2D/training/det_PCMT-D_ir_fake_list.txt
+/ssd1/wangwj/dataset/fake_images_file_path_list/with_face_info/2D/training/det_PCXZ-D_ir_fake_list.txt
+/ssd1/wangwj/dataset/fake_images_file_path_list/with_face_info/2D/training/det_PGF-D_ir_fake_list.txt
+/ssd1/wangwj/dataset/fake_images_file_path_list/with_face_info/2D/training/det_PH-D_ir_fake_list.txt
+/ssd1/wangwj/dataset/fake_images_file_path_list/with_face_info/2D/training/det_PI-D_ir_fake_list.txt
+/ssd1/wangwj/dataset/fake_images_file_path_list/with_face_info/2D/training/det_P-L_ir_fake_list.txt
+/ssd1/wangwj/dataset/fake_images_file_path_list/with_face_info/2D/training/det_PLS-D_ir_fake_list.txt
+/ssd1/wangwj/dataset/fake_images_file_path_list/with_face_info/2D/training/det_PMSZP-D_ir_fake_list.txt
+/ssd1/wangwj/dataset/fake_images_file_path_list/with_face_info/2D/training/det_PRPT-D_ir_fake_list.txt
+/ssd1/wangwj/dataset/fake_images_file_path_list/with_face_info/2D/training/det_PW-D_ir_fake_list.txt
+/ssd1/wangwj/dataset/fake_images_file_path_list/with_face_info/2D/training/det_PX-D_ir_fake_list.txt
+/ssd1/wangwj/dataset/fake_images_file_path_list/with_face_info/2D/training/det_W-D_ir_fake_list.txt
