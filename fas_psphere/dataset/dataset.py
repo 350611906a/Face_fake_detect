@@ -11,8 +11,8 @@ import json
 import logging
 import sys
 
-sys.path.append('/ssd1/wangwj/work_dilusense/FAS-trainer/fas_preprocessor/align_and_crop/amba/')
-from ifas_crop_amba_cv28 import align_and_crop_amba_cv28
+# sys.path.append('/ssd1/wangwj/work_dilusense/FAS-trainer/fas_preprocessor/align_and_crop/amba/')
+# from ifas_crop_amba_cv28 import align_and_crop_amba_cv28
 
 _verbose = False
 
@@ -871,28 +871,28 @@ def prepare_img_stack_for_test(src_img, landmark, img_dim, need_augment=True, no
 
     return img_stack  # shape: [1, img_dim, img_dim]
 
-def prepare_img_stack_same_process(src_img, landmark, img_dim, need_augment=True, non_face_img=None):
+# def prepare_img_stack_same_process(src_img, landmark, img_dim, need_augment=True, non_face_img=None):
     
-    # 转化为单通道
-    img_stack = src_img[..., :1]
-    img_stack = np.squeeze(img_stack)
+#     # 转化为单通道
+#     img_stack = src_img[..., :1]
+#     img_stack = np.squeeze(img_stack)
 
-    # 直接调用接口
-    '''
-        1、根据关键点得到人脸框信息，并扩大1.8倍数
-        2、crop出该人脸框内的图像，修改对应关键点
-        3、直接仿射变换到256*256
-        4、归一化，并转化通道hwc为chw
-    '''  
-    img_stack = align_and_crop_amba_cv28(img_stack, landmark, version=0)
-    # print("img_stack shape: ", img_stack.shape)
+#     # 直接调用接口
+#     '''
+#         1、根据关键点得到人脸框信息，并扩大1.8倍数
+#         2、crop出该人脸框内的图像，修改对应关键点
+#         3、直接仿射变换到256*256
+#         4、归一化，并转化通道hwc为chw
+#     '''  
+#     img_stack = align_and_crop_amba_cv28(img_stack, landmark, version=0)
+#     # print("img_stack shape: ", img_stack.shape)
 
-    # 扩展为[1, img_dim, img_dim]
-    # img_stack = img_stack.unsqueeze(0)
-    # img_stack = torch.unsqueeze(img_stack, 0)
-    img_stack = np.expand_dims(img_stack, axis=0)
+#     # 扩展为[1, img_dim, img_dim]
+#     # img_stack = img_stack.unsqueeze(0)
+#     # img_stack = torch.unsqueeze(img_stack, 0)
+#     img_stack = np.expand_dims(img_stack, axis=0)
 
-    return img_stack
+#     return img_stack
 
 
 def get_fake_fp_landmark_tuples_from_list(fake_2d_list_fp, fake_3d_list_fp, ratio_3d: float, max_samples_each_list, verbose=True):
@@ -1137,10 +1137,10 @@ class TestingDataSet(torch_data.Dataset):
         # img_stack = prepare_img_stack(img, landmark=landmark, img_dim=self.img_dim, need_augment=False)
 
         # python版本修改后预处理
-        # img_stack = prepare_img_stack_for_test(img, landmark=landmark, img_dim=self.img_dim, need_augment=False)
+        img_stack = prepare_img_stack_for_test(img, landmark=landmark, img_dim=self.img_dim, need_augment=False)
         
         # c++版本修改后预处理
-        img_stack = prepare_img_stack_same_process(img, landmark=landmark, img_dim=self.img_dim, need_augment=False)
+        # img_stack = prepare_img_stack_same_process(img, landmark=landmark, img_dim=self.img_dim, need_augment=False)
 
         return img_stack, fp
 

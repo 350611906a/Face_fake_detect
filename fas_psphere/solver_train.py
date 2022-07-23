@@ -456,7 +456,8 @@ def fast_run():
 
 
     # DM8预训练模型
-    weights_fp = '/ssd1/wangwj/work_dilusense/FAS_commit/train_test_all_projects/fas/pre_checkpoint/DM8/epoch-314.pth'
+    # weights_fp = '/ssd1/wangwj/work_dilusense/FAS_commit/train_test_all_projects/fas/pre_checkpoint/DM8/epoch-314.pth'
+    weights_fp = None
     # DM8数据
     param = { 
         'work_root': './tmp/lvmi_mobileNet_autoRadius_k%d' % k_num,
